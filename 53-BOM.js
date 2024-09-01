@@ -114,7 +114,18 @@ document.addEventListener('paste', ()=>{
 
 
 // window.opener
-const openerObj = window.opener
-console.log(openerObj)
+// const openerObj = window.opener
+// console.log(openerObj)
 
-const openWindow = window.open('www.kailashkumar.com', 'newWindow', 'width=600', 'height=400')
+// const openWindow = window.open('https://www.kailashkumar.com', 'newWindow', 'width=600', 'height=400')
+
+
+// const historyObj = window.history
+// console.log(historyObj)
+// console.log(historyObj.back)
+
+// window.open('https://www.kailashkumar.com', 1000, 400)
+// const resizeObj = window.resizeTo(1,1)
+// console.log(resizeObj)
+
+const scrollTop = window.scrollX(100)
