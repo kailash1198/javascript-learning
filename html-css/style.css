@@ -1,0 +1,20 @@
+/* #card{
+   
+} */
+
+.default {
+  background-color: rgb(120, 243, 128);
+  width: 40%;
+  height: 50%;
+  padding: 3rem;
+  border-radius: 1rem;
+}
+
+.card-black {
+  background-color: black;
+  color: white;
+  width: 40%;
+  height: 50%;
+  padding: 3rem;
+  border-radius: 1rem;
+}
