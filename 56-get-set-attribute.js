@@ -12,8 +12,8 @@
 // headingTag.removeAttribute('id')
 // removeAtt.innerText = "Remove"
 
-let card = document.getElementById("card");
-card.addEventListener("click", () => {
-  card.setAttribute("class", "card-black");
-  card.style.transition = 'all 0.9s'
-});
+// let card = document.getElementById("card");
+// card.addEventListener("click", () => {
+//   card.setAttribute("class", "card-black");
+//   card.style.transition = 'all 0.9s'
+// });
