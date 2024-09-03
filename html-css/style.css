@@ -40,3 +40,12 @@
   background-color: red;
   text-align: center;
 }
+
+.newCard{
+  /* width: 100px;
+  height: 100px; */
+  background-color: rgba(90, 122, 124, 0.291);
+  border-radius: 1rem;
+  padding: 2rem;
+  margin: 1rem;
+}
