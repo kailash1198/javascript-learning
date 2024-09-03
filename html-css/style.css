@@ -18,3 +18,25 @@
   padding: 3rem;
   border-radius: 1rem;
 }
+
+.container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  text-align: center;
+  margin: 1rem;
+  border-radius: 1rem;
+}
+
+.sub-card {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  text-align: center;
+}
