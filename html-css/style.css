@@ -49,3 +49,19 @@
   padding: 2rem;
   margin: 1rem;
 }
+
+.cardParent{
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.checkBox{
+  color: red;
+  background-color: rgb(41, 41, 214);
+  /* width: 100px;
+  height: 100px; */
+  /* display: inline-block; */
+  margin-right: 1rem;
+}
+
