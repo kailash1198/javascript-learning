@@ -2,66 +2,62 @@
    
 } */
 
-.default {
+/* .default {
   background-color: rgb(120, 243, 128);
   width: 40%;
   height: 50%;
   padding: 3rem;
   border-radius: 1rem;
-}
+} */
 
-.card-black {
+/* .card-black {
   background-color: black;
   color: white;
   width: 40%;
   height: 50%;
   padding: 3rem;
   border-radius: 1rem;
-}
+} */
 
-.container{
+/* .container{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-}
+} */
 
-.card {
+/* .card {
   width: 100px;
   height: 100px;
   background-color: red;
   text-align: center;
   margin: 1rem;
   border-radius: 1rem;
-}
+} */
 
-.sub-card {
+/* .sub-card {
   width: 100px;
   height: 100px;
   background-color: red;
   text-align: center;
-}
+} */
 
-.newCard{
-  /* width: 100px;
-  height: 100px; */
+/* .newCard{
+
   background-color: rgba(90, 122, 124, 0.291);
   border-radius: 1rem;
   padding: 2rem;
   margin: 1rem;
-}
+} */
 
-.cardParent{
+/* .cardParent{
   display: flex;
   flex-direction: column;
   justify-content: left;
-}
+} */
 
-.checkBox{
+/* .checkBox{
   color: red;
   background-color: rgb(41, 41, 214);
-  /* width: 100px;
-  height: 100px; */
-  /* display: inline-block; */
   margin-right: 1rem;
 }
-
+ */
