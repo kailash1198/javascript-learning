@@ -61,3 +61,46 @@
   margin-right: 1rem;
 }
  */
+
+
+ .container{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+
+ .card{
+  margin-top: 10%;
+  margin-left: 40%;
+  width: 20%;
+  height: auto;
+ }
+ .card .image{
+  width: 100%;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.5s;
+ }
+
+ .image-zoomed{
+  width: 110%;
+  height: 110%;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.5s;
+ }
+
+
+ .menu{
+  position: absolute;
+  top: 20%;
+  right: 20%;
+  background-color: rgb(171, 230, 171);
+  padding: 2rem;
+  border-radius: 1rem;
+  visibility: hidden;
+  transition: all 0.5s;
+ 
+ }

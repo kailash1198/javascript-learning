@@ -4,8 +4,9 @@
 //     console.log(e.altKey)
 // })
 
-const inputField = document.querySelector(".input");
-const paragraph = document.querySelector('p')
+// const inputField = document.querySelector(".input");
+// const paragraph = document.querySelector('p')
+// const submitBtn = document.querySelector('.submitBtn')
 
 // inputField.addEventListener("keydown", (e) => {
 //   console.log("Key Down");
@@ -18,6 +19,6 @@ const paragraph = document.querySelector('p')
 // });
 
 
-inputField.addEventListener('submit', ()=>{
-    
-})
+// inputField.addEventListener('submit', ()=>{
+//     console.log("Submit triggred")
+// })
