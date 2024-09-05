@@ -1,0 +1,122 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* background-color: black;
+  width: 100vw;
+  height: 100vh; */
+  background-color: rgba(169, 221, 167, 0.444);
+  display: flex;
+  justify-content: center;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: 50vw;
+  /* height: 100vh; */
+  margin: 3rem 0rem;
+}
+
+#header {
+  /* background-color: red; */
+  width: 90%;
+  margin: auto;
+  padding-top: 0.5rem;
+}
+
+#header h1 {
+  text-align: center;
+  font-weight: 800;
+  font-size: 2rem;
+  /* background-color: green; */
+}
+
+#header .green_color_text {
+  color: green;
+  font-weight: 800;
+}
+
+/* Main for task container */
+#main_container {
+  width: 90%;
+  margin: auto;
+  background-color: white;
+  margin-top: 1rem;
+  padding: 0rem 1rem;
+  border-radius: 0.5rem;
+}
+
+#main_container .progress {
+  display: flex;
+  flex-direction: column;
+}
+
+#main_container .progress .date {
+  padding-top: 0.5rem;
+}
+#main_container .progress .date h1 {
+  font-weight: 800;
+}
+
+#main_container .progress .date .fa-regular {
+  margin-left: 0.5rem;
+  color: rgb(226, 171, 31);
+}
+
+#main_container .progress .progress_bar {
+  padding: 0.4rem 0rem;
+}
+
+#main_container .progress .progress_bar p {
+  color: grey;
+}
+
+#main_container .progress .progress_bar #task_progress_bar {
+  width: 100%;
+  padding: 2rem;
+}
+
+#main_container .progress .progress_message p{
+    color: red;
+}
+
+#main_container .task{
+    padding: 0.5rem 0rem;
+}
+
+#main_container .task .card{
+    border: 1px solid rgba(128, 128, 128, 0.42);
+    padding: .5rem;
+    margin-top: 1rem;
+    border-radius: 5px;
+    display: flex;
+}
+
+#main_container .task .card .taskName{
+    margin-left: 1rem;
+}
+#main_container .task .card .taskName input{
+    border: none;
+    outline: none;
+}
+
+#main_container .footer{
+    padding: 3rem 0rem;
+}
+
+#main_container .footer p{
+    text-align: center;
+    font-weight: 600;
+}
+
+.strike{
+    text-decoration: line-through;
+    color: green;
+}

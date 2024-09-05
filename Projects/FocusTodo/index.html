@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusTodo</title>
+    <!-- Google Fonts : Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- FOnt awesome -->
+    <script src="https://kit.fontawesome.com/c1fe0e6aeb.js" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header id="header">
+            <h1 class="heading_text">Focus on <span class="green_color_text">Today</span></h1>
+        </header>
+
+        <!-- Main - for task container -->
+        <main id="main_container">
+            <div class="progress">
+                <div class="date">
+                    <h1>Today <i class="fa-regular fa-sun"></i></h1>
+
+                </div>
+                <div class="progress_bar">
+                    <p>Raise the bar by Completing your goals</p>
+                    <progress value="0" max="3" id="task_progress_bar"></progress>
+                </div>
+                <div class="progress_message">
+                    <p id="progressPara">Please set all 3 goals</p>
+                </div>
+                <bar></bar>
+            </div>
+            <div class="task">
+                <div class="card" id="card-1">
+                    <div class="checkBox">
+                        <i class="fa-regular fa-circle" id="checkOne"></i>
+                    </div>
+                    <div class="taskName">
+                        <input type="text" placeholder="Task Name" id="inputOne">
+                    </div>
+                </div>
+                <div class="card" id="card-2">
+                    <div class="checkBox">
+                        <i class="fa-regular fa-circle" id="checkTwo"></i>
+                    </div>
+                    <div class="taskName">
+                        <input type="text" placeholder="Task Name" class="taskOne" id="inputTwo">
+                    </div>
+                </div>
+                <div class="card" id="card-3">
+                    <div class="checkBox">
+                        <i class="fa-regular fa-circle" id="checkThree"></i>
+                    </div>
+                    <div class="taskName">
+                        <input type="text" placeholder="Task Name" id="inputThree">
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <p>Move One step, Ahead Today</p>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
