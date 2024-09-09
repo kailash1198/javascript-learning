@@ -6,7 +6,8 @@ body {
   width: 100vw;
   height: 100vh; */
   background-color: rgba(169, 221, 167, 0.444);
-  display: flex;
+  
+  /* flex-direction: column; */
   justify-content: center;
 }
 
@@ -23,6 +24,7 @@ body {
   position: absolute;
   bottom: 10%;
   right: 10%;
+  position: fixed;
 }
 
 #addTask i {
@@ -45,6 +47,9 @@ body {
   width: 50vw;
   /* height: 100vh; */
   margin: 3rem 0rem;
+  display: flex;
+  flex-direction: column;
+  margin-inline:auto;
 }
 
 #header {
@@ -161,6 +166,34 @@ body {
   border: none;
   background-color: rgba(234, 242, 234, 0.461);
   outline: none;
-  padding: 0.5rem;
+  padding: 0.4rem;
   border-radius: 5px;
+}
+
+/* #taskContainer{
+  transition: all 0.5s;
+} */
+
+.unChecked{
+  visibility: hidden;
+}
+
+.checked{
+  visibility: visible;
+}
+
+.strikeClass{
+  text-decoration: line-through;
+}
+
+.author{
+  font-weight: 400;
+  font-size: small;
+  padding: 1rem 0rem;
+  text-align: center;
+}
+
+.love{
+  color: red;
+  font-size: 1rem;
 }

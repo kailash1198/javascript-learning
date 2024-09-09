@@ -1,66 +1,13 @@
-// const progressBar = document.getElementById("task_progress_bar");
-// const progressMessage = document.getElementById("progressPara");
-
-// let taskOne = document.getElementById('checkOne')
-// let taskTwo = document.getElementById('checkTwo')
-// let taskThree = document.getElementById('checkThree')
-
-// let allTask = [
-//   document.getElementById("checkOne"),
-//   document.getElementById("checkTwo"),
-//   document.getElementById("checkThree"),
-// ];
-
-// let inputField = [
-//   document.getElementById("inputOne"),
-//   document.getElementById("inputTwo"),
-//   document.getElementById("inputThree"),
-// ];
-// let allCard = [
-//   document.getElementById("card-1"),
-//   document.getElementById("card-2"),
-//   document.getElementById("card-3"),
-// ];
-
-// for(let i=0; i<3; i++){
-//     inputField[i].addEventListener("blur", (e) => {
-//         inputField[i].remove();
-//         let userInput = e.target.value;
-//         let newTaskText = document.createElement("p");
-//         newTaskText.innerText = userInput;
-//         allCard[i].appendChild(newTaskText);
-
-//         if (progressBar.getAttributeNode("value").value !=0){
-//             newTaskText.classList = "strike"
-//         }
-
-//       });
-// }
-
-// for (let i = 0; i < 3; i++) {
-//   allTask[i].addEventListener("click", () => {
-//     if (progressBar.getAttributeNode("value").value == 0) {
-//       progressBar.getAttributeNode("value").value = 1;
-//       allTask[i].className = "fa-solid fa-circle-check";
-//     } else if (progressBar.getAttributeNode("value").value == 1) {
-//       progressBar.getAttributeNode("value").value = 2;
-//       allTask[i].className = "fa-solid fa-circle-check";
-//     } else if (progressBar.getAttributeNode("value").value == 2) {
-//       progressBar.getAttributeNode("value").value = 3;
-//       allTask[i].className = "fa-solid fa-circle-check";
-//       progressMessage.innerText = "All task Completed";
-//       progressMessage.style.color = "green";
-//     }
-//   });
-// }
-
 const addTaskBtn = document.getElementById("addBtn");
 const taskContainer = document.getElementById("taskContainer");
+let taskProgressBar = document.getElementById("task_progress_bar");
+var progressNum = 0;
+var maxGoal = 0;
 
-let taskCount = 0;
+addTaskBtn.disabled = false; // Ensure the button is enabled initially
 
-addTaskBtn.addEventListener("click", () => {
-  taskCount++;
+addTaskBtn.addEventListener("click", function () {
+  taskContainer.style.transition = "all 1s";
   let divTag = document.createElement("div");
   let inputTag = document.createElement("input");
   let checkingIconTag = document.createElement("i");
@@ -68,9 +15,68 @@ addTaskBtn.addEventListener("click", () => {
   divTag.className = "task";
   checkingIconTag.className = "fa-regular fa-circle";
   inputTag.className = "margin-left task-input";
-  inputTag.placeholder = "Enter task Name"
+  inputTag.placeholder = "Enter task Name";
 
   divTag.appendChild(checkingIconTag);
   divTag.appendChild(inputTag);
   taskContainer.appendChild(divTag);
+
+  addTaskBtn.disabled = true; // Disable the button while entering the task
+
+  inputTag.focus(); // Automatically focus the input field for the user to enter text
+
+  inputTag.addEventListener("blur", () => {
+    let inputValue = inputTag.value.trim();
+    if (inputValue === "") {
+      divTag.remove();
+      maxGoal--;
+      taskProgressBar.max = maxGoal;
+    } else {
+      var taskAddPara = document.createElement("p");
+      taskAddPara.className = "task-added";
+      divTag.appendChild(taskAddPara);
+      inputTag.remove();
+      taskAddPara.innerText = inputValue;
+      taskAddPara.style.width = "100%";
+      taskAddPara.style.marginLeft = "1rem";
+      maxGoal++;
+      taskProgressBar.max = maxGoal;
+    }
+
+    checkingIconTag.addEventListener("click", () => {
+      if (checkingIconTag.classList.contains("fa-circle")) {
+        progressNum++;
+        checkingIconTag.classList.remove("fa-circle");
+        checkingIconTag.classList.add("fa-check-circle");
+        checkingIconTag.style.color = "green";
+        taskAddPara.style.color = "green";
+        taskAddPara.classList.add("strikeClass");
+        taskProgressBar.value = progressNum;
+      } else {
+        progressNum--;
+        checkingIconTag.classList.remove("fa-check-circle");
+        checkingIconTag.classList.add("fa-circle");
+        taskAddPara.style.color = "black";
+        checkingIconTag.style.color = "black";
+        taskAddPara.classList.remove("strikeClass");
+        taskProgressBar.value = progressNum;
+      }
+    });
+
+    divTag.addEventListener("dblclick", () => {
+      maxGoal--
+      divTag.remove();
+      alert("Task Removed");
+      taskProgressBar.max = maxGoal;
+    });
+
+    addTaskBtn.disabled = false; // Re-enable the button in both cases (valid or empty input)
+  });
+
+
+
+  // Optional: Re-enable the button if the user starts typing in the input field
+  inputTag.addEventListener("input", () => {
+    addTaskBtn.disabled = false; // Enable the button once there is input
+  });
 });
