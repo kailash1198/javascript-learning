@@ -1,0 +1,38 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    /* background-color: red; */
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.card{
+    background-color: rgba(128, 128, 128, 0.265);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin: 1rem;
+}
+
+/* loadind more */
+.load{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0rem;
+}
+
+.loadMore{
+    background-color: rgba(0, 68, 255, 0.91);
+    padding: 1rem;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
